@@ -1,9 +1,8 @@
-/*given an array of integers nums and an integer
-target, this function prints indices of two number such that they add up to target.*/
 #include <iostream>
 #include <assert.h>
 using namespace std;
-void two_sum(int*, int, int);
+void two_sum(int*, int, int); /*given an array of integers nums and an integer
+target, this function prints indices of two number such that they add up to target.*/
 int main(){
     int size, target;
     cin>>size; 
