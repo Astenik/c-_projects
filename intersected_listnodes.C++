@@ -20,7 +20,7 @@ string intesrected_lists(ListNode* n1, ListNode* n2, int s1, int s2)
         {
             if(n1[i].next == n2[j].next)
             {
-                return to_string(n1[i].value);
+                return to_string(n1[i + 1].value);
             }
         }
     }
