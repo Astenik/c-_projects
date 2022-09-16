@@ -1,3 +1,4 @@
+/*this project changes infix form of expression to postfix form*/
 #include <iostream>
 #include <stack>
 #include <string>
@@ -8,7 +9,7 @@ int prior(char);
 
 int main()
 {
-    std::stack<int> st;
+    std::stack<char> st;
     std::string input;
     std::cin >> input;
     for(int i = 0; i < input.size(); ++i)
@@ -27,7 +28,7 @@ int main()
         }
         else if(is_operator(input[i]))
         { 
-            while(!st.empty() && (prior(st.top()) >= prior(input[i])))
+            while(!st.empty() && is_operator(st.top()) && (prior(st.top()) >= prior(input[i])))
             {
                 std::cout << st.top();
                 st.pop();
