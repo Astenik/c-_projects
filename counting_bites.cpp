@@ -1,6 +1,7 @@
 #include <iostream>
-#include "Vector.h" //this file is exist in classes repo.//
-using namespace std;
+#include "Vector.h" 
+//this file is exist in classes repo.//
+
 int bin_sum(int number)
 {
    int s = 0;
@@ -9,8 +10,10 @@ int bin_sum(int number)
        s += number % 2;
        number /= 2;
    }
+   
    return s;
 } 
+
 void counting_bites(int number)
 {
     Vector res;
@@ -20,13 +23,15 @@ void counting_bites(int number)
     }
     for(int i = 0; i < res.get_size(); ++i)
     {
-        cout<<res[i]<<" ";
+        std::cout << res[i] << " ";
     }
 }
+
 int main()
 {
     int n;
-    cin>>n;
+    std::cin >> n;
     counting_bites(n);
+   
     return 0;
 }
