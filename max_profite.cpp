@@ -1,25 +1,31 @@
 #include <iostream>
 #include <assert.h>
-using namespace std;
+
 int max_profit(int*, int);
 int max(int&, int&);
-int main(){
+
+int main()
+{
     int size;
     cin>>size;
     int* arr = new int [size];
     assert(arr);
     for(int i = 0; i < size; ++i)
     {
-        cin>>arr[i];
+        std::cin >> arr[i];
     }
-    cout<<max_profit(arr, size)<<endl;
+    
+    std::cout << max_profit(arr, size) << std::endl;
     delete [] arr;
+    
     return 0;
 }
+
 int max(int& x, int& y)
 {
     return x > y ? x : y;
 }
+
 int max_profit(int* arr, int size)
 {
     int _max = 0;
