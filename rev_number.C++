@@ -1,19 +1,23 @@
 #include <iostream>
 #include <assert.h>
-using namespace std;
+
 int base(int, int);
 int reverse_bites(char*);
-int main(){
+
+int main()
+{
     char* n = new char [32];
     assert(n);
     for(int i = 0; i < 32; ++i)
     {
-        cin>>n[i];
+       std:cin >> n[i];
     }
-    cout<<reverse_bites(n);
+    std::cout << reverse_bites(n);
     delete [] n;
+    
     return 0;
 }
+
 int base(int n, int k)
 {
     if(k == 0){ return 1; }
@@ -25,6 +29,7 @@ int base(int n, int k)
     }
     return s;
 }
+
 int reverse_bites(char* name)
 {
     int sum = 0;
@@ -46,5 +51,6 @@ int reverse_bites(char* name)
         k--;
     }
     delete [] n;
+    
     return sum;
 }
