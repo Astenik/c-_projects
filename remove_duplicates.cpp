@@ -1,18 +1,22 @@
 #include <iostream>
 #include <assert.h>
-using namespace std;
+
 void remove_duplicates(int*, int);
-int main(){
+
+int main()
+{
     int* arr = new int[6];
     assert(arr);
     for(int i = 0; i < 6; ++i)
     {
-        cin>>arr[i];
+        std::cin >> arr[i];
     }
     remove_duplicates(arr, 6);
     delete [] arr;
+    
     return 0;
 }
+
 void remove_duplicates(int* arr, int size)
 {
     for(int i = 0; i < size; ++i)
@@ -29,9 +33,10 @@ void remove_duplicates(int* arr, int size)
             }
         }
     }
+    
     for(int i = 0; i < size; ++i)
     {
-       cout<<arr[i]<<" ";
+       std::cout << arr[i] << " ";
     }
     
 }
