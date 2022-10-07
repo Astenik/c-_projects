@@ -1,20 +1,27 @@
 #include <iostream>
 #include <assert.h>
-using namespace std;
-void two_sum(int*, int, int); /*given an array of integers nums and an integer
+
+void two_sum(int*, int, int);
+
+/*given an array of integers nums and an integer
 target, this function prints indices of two number such that they add up to target.*/
-int main(){
+
+int main()
+{
     int size, target;
-    cin>>size; 
-    cin>>target;
+    std::cin >> size; 
+    std::cin >> target;
+    
     int* arr = new int [size];
     assert(arr);
     for(int i = 0; i < size; ++i)
     {
-        cin>>arr[i];
+        std::cin >> arr[i];
     }
+    
     two_sum(arr, size, target);
     delete [] arr;
+    
     return 0;
 }
 void two_sum(int* nums, int s, int target)
@@ -25,10 +32,11 @@ void two_sum(int* nums, int s, int target)
         {
             if(nums[i] + nums[j] == target)
             {
-                cout<<"["<<i<<","<<j<<"]"<<endl;
+                std::cout << "[ "<< i << ", "<< j << "]" << std::endl;
                 break;
             }
-        if(j != s) break;
+        if(j != s)
+            break;
         }
     }
 }
