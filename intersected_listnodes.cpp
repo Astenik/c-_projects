@@ -1,6 +1,6 @@
 #include <iostream>
 #include <assert.h>
-using namespace std;
+
 class ListNode
 {
   public:
@@ -11,7 +11,9 @@ class ListNode
      ListNode(int val, ListNode* n): value(val), next(n){}
     ~ListNode(){ delete next; }
 };
+
 /*this function returns the number where the two nodelists are intersected*/
+
 string intesrected_lists(ListNode* n1, ListNode* n2, int s1, int s2)
 {
     for(int i = 0; i < s1; ++i)
@@ -25,4 +27,5 @@ string intesrected_lists(ListNode* n1, ListNode* n2, int s1, int s2)
         }
     }
     return "no intersection";
+  
 }
