@@ -1,6 +1,6 @@
 #include <iostream>
 #include <assert.h>
-using namespace std;
+
 class ListNode
 {
    public:
@@ -11,6 +11,7 @@ class ListNode
     ListNode(int val, ListNode* n):value(val), next(n){}
     ~ListNode(){}
 };
+
 void rev_listnode(ListNode* arr, int size)
 {
     ListNode* c_arr = new ListNode [size];
@@ -27,23 +28,27 @@ void rev_listnode(ListNode* arr, int size)
     }
     for(int k = 0; k < size; ++k)
     {
-        cout<<c_arr[k].value<<" ";
-    }
+        std::cout << c_arr[k].value << " ";
+    } 
+   
     delete [] c_arr;
 }
+
 int main()
 {
     ListNode* arr = new ListNode [5];
     assert(arr);
     for(int i = 0; i < 5; ++i)
     {
-        cin>>arr[i].value;
+        std::cin >> arr[i].value;
     }
     for(int j = 0; j < 4; ++j)
     {
         arr[j].next = &arr[j + 1];
     }
+   
     rev_listnode(arr, 5);
     delete [] arr;
+   
     return 0;
 }
