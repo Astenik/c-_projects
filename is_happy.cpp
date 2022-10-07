@@ -1,10 +1,11 @@
 #include <iostream>
 #include <assert.h>
-using namespace std;
+
 int sum_of_sqr(int num)
 {
     int sum = 0;
     int n;
+    
     while(num != 0)
     {
         n = num % 10;
@@ -13,6 +14,7 @@ int sum_of_sqr(int num)
     }
     return sum;
 }
+
 bool is_happy(int number)
 {
     int n = sum_of_sqr(number);
@@ -27,12 +29,15 @@ bool is_happy(int number)
             return false;
         }
     }
+    
     return true;
 }
+
 int main()
 {
     int n;
-    cin>>n;
-    cout<<is_happy(n)<<endl;
+    std::cin >> n;
+    std::cout << is_happy(n) << std::endl;
+    
     return 0;
 }
